@@ -4,14 +4,16 @@
 
 ## How to run tests
 *Tests Example*
+Note: The default variant is debug.
 
-`./scripts/run-tests.sh Development`
+`./scripts/run-tests.sh development`
 
-`./scripts/run-tests.sh Full`
+`./scripts/run-tests.sh product`
 
 ## How to build app
 *Build Example*
+Note: The default variant is release.
 
-`./scripts/build-app.sh Development`
+`./scripts/build-app.sh development`
 
-`./scripts/build-app.sh Full`
+`./scripts/build-app.sh product`

@@ -51,7 +51,7 @@ android {
             applicationIdSuffix ".development"
             versionNameSuffix "-development"
         }
-        full {
+        product {
             dimension "version"
             applicationIdSuffix ".full"
             versionNameSuffix "-full"
