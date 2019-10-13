@@ -8,7 +8,7 @@ env:
  - ADB_INSTALL_TIMEOUT=5 # minutes
  - ANDROID_API=28 # api is same as gradle file
  matrix:
- - EMULATOR_API=21
+# - EMULATOR_API=21
  - EMULATOR_API=22
 android:
   components:
@@ -44,38 +44,7 @@ before_script:
   - emulator -avd test -no-audio -no-window &
   - scripts/android-wait-for-emulator.sh
   - adb shell input keyevent 82 &
-# addons:
-#   srcclr: true
+
 script:
-  - echo "hello world!"
-  - ./gradlew lintDebug testDebugUnitTest connectedDebugAndroidTest
-  # - ./gradlew cleanAllModules
-  # - ./gradlew testAllModulesTravis
-  # - if [[ -n $TRAVIS_TAG ]]; then ./gradlew ship; fi
-
-# Integration tests need to run first to reset the PR build status to pending
-stages:
-  - 'Integration tests'
-  - 'Benchmarking tests'
-  - 'Test'
-
-# jobs:
-#   include:
-#     - &integrationtest
-#       stage: 'Integration tests'
-#       env:
-#         - SDK=android
-#         - BUILD_NUMBER=${TRAVIS_JOB_NUMBER/.}
-#         - SDK_BRANCH=$TRAVIS_PULL_REQUEST_BRANCH
-#       cache: false
-#       language: minimal
-#       before_install: skip
-#       install: skip
-#       before_script:
-#         - mkdir $HOME/travisci-tools && pushd $HOME/travisci-tools && git init && git pull https://$CI_USER_TOKEN@github.com/optimizely/travisci-tools.git && popd
-#       script:
-#         - $HOME/travisci-tools/trigger-script-with-status-update.sh
-#       after_success: travis_terminate 0
-#     - <<: *integrationtest
-#       stage: 'Benchmarking tests'
-#       env: SDK=android FULLSTACK_TEST_REPO=Benchmarking BUILD_NUMBER=${TRAVIS_JOB_NUMBER/.} SDK_BRANCH=$TRAVIS_PULL_REQUEST_BRANCH
+#  - ./gradlew lintDebug testDebugUnitTest connectedDebugAndroidTest
+  - bash scripts/run-tests.sh
