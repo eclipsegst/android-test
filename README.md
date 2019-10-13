@@ -2,6 +2,15 @@
 
 [![Build Status](https://travis-ci.com/eclipsegst/android-test.svg?branch=master)](https://travis-ci.com/eclipsegst/android-test)
 
+## Build Type:
+ - release
+ - debug
+ - staging
+ 
+## Build Flavor:
+ - development 
+ - product
+ 
 ## How to run tests
 *Tests Example*
 
