@@ -53,7 +53,7 @@ script:
 jobs:
   include:
     - stage: test
-      script: echo "Done."
+      script: ./gradlew lintDebug testDebugUnitTest connectedDebugAndroidTest
 #      script: bash scripts/run-tests.sh
       on:
         all_branches: true
