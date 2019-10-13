@@ -14,7 +14,7 @@ Note: The default build type is debug.
 ## How to build app
 *Build Example*
 
-Note: The default build flavor is release.
+Note: The default build type is release.
 
 `./scripts/build-app.sh development`
 
