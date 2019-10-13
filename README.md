@@ -4,6 +4,7 @@
 
 ## How to run tests
 *Tests Example*
+
 Note: The default variant is debug.
 
 `./scripts/run-tests.sh development`
@@ -12,6 +13,7 @@ Note: The default variant is debug.
 
 ## How to build app
 *Build Example*
+
 Note: The default variant is release.
 
 `./scripts/build-app.sh development`
