@@ -5,7 +5,7 @@
 ## How to run tests
 *Tests Example*
 
-Note: The default variant is debug.
+Note: The default build type is debug.
 
 `./scripts/run-tests.sh development`
 
@@ -14,7 +14,7 @@ Note: The default variant is debug.
 ## How to build app
 *Build Example*
 
-Note: The default variant is release.
+Note: The default build flavor is release.
 
 `./scripts/build-app.sh development`
 
